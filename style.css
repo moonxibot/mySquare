@@ -1,0 +1,231 @@
+/* 기본 요소 지정 */
+* {
+    font-family: 'NanumSquare', sans-serif
+}
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+button, input:focus {
+    outline: 0;
+}
+input:focus, textarea:focus {
+    outline: 0;
+}
+input::placeholder {
+    color: #b5b5b5;
+}
+
+/*기본 버튼 템플릿*/
+.button {
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+
+    margin-top: 1vh;
+    padding: 8px 15px;
+}
+
+/*일반 화면 요소 */
+#title {
+    position: absolute;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+#square {
+    background-color: royalblue;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    position: absolute;
+}
+
+/*버튼*/
+#settingBtn {
+    background-color: royalblue;
+    font-size: 1.5rem;
+    color: white;
+
+    left: 10px;
+    bottom: 35px;
+
+    position: absolute;
+}
+#copyCode {
+    position: absolute;
+
+    bottom: 35px;
+    left: 140px;
+
+    background-color: royalblue;
+    color: white;
+    font-size: 1.5rem;
+}
+#getCode {
+    position: absolute;
+    
+    bottom: 35px;
+    left: 265px;
+
+    background-color: royalblue;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*소스코드 공개*/
+#codeLocation {
+    position: absolute;
+    font-size: 1rem;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+}
+
+/* 도형 편집 */
+#edit {
+    background-color: #e8e8e8;
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+#editSave {
+    position: absolute;
+    bottom: 10px;
+    right: 135px;
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+}
+#editClose {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+/* 팝업창 */
+#popupBlack {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+
+    left: 0%;
+    top: 0%;
+
+    z-index: 1;
+}
+
+/* 새로운 이름 지정 */
+#newName {
+    position: absolute;
+    z-index: 1;
+
+    background-color: royalblue;
+
+    color: white;
+    text-align: center;
+
+    width: 820px;
+    height: 380px;
+
+    left: 50%;
+    top: 50%;
+    margin: -190px -410px;
+    
+    border-radius: 10px;
+}
+#newNameTitle {
+    font-weight: 500;
+    font-size: 4rem;
+
+    margin: 0;
+    margin-top: 30px;
+}
+#newNameInput {
+    font-size: 1.4rem;
+    background-color: #4057ed;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 400px;
+    padding: 10px;
+}
+/*alert*/
+#alert {
+    background-color: royalblue;
+
+    color: white;
+    text-align: center;
+
+    border-radius: 30px;
+
+    width: 700px;
+    height: 400px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -200px -350px;
+
+    z-index: 1;
+}
+#alertTitle {
+    font-weight: 500;
+    margin: 0;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    font-size: 4rem;
+}
+#alertContent {
+    font-weight: 500;
+    margin: 0;
+    font-size: 1.5rem;
+    padding-bottom: 1vh;
+}
+#alertOK {
+    margin: 0;
+    background-color: #4057ed;
+    color: white;
+}
+
+/*파일 공유*/
+#copyDiv {
+    background-color: #d9d9d9;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 5px;
+    width: 350px;
+    height: 180px;
+
+    position: absolute;
+    left: 10px;
+    bottom: 90px;
+
+    padding: 10px;
+}
+#copyText {
+    font-size: 1.1rem;
+    width: 100%;
+    height: 50%;
+}
+#copyCopy {
+    background-color: royalblue; 
+    color: white; 
+    font-size: 1.2rem;
+}
+#copyClose {
+    background-color: red; 
+    color: white; 
+    font-size: 1.2rem;
+}
