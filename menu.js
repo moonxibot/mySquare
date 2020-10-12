@@ -5,8 +5,7 @@ addAttribute의 인자에는 아래의 정보가 포함된 객체를 넣어야 �
 name: span에 표시될 글자
 id: input의 id
 default: square의 기본 초기스타일 지정(square가 인자로 자동 제공됨)
-write: 도형 편집 창이 열렸을 때 input에 표시될 내용. 꼭 입력이 아니더라도 코드를 넣을 수 있습니다.
-func: 도형 편집 저장을 눌렀을 때 square에 반영될 내용.*/
+style: square에서 이 속성이 나타내는 값을 의미함*/
 
 //굴곡
 addAttribute({
@@ -15,12 +14,7 @@ addAttribute({
     default: function(square) {
         square.style.borderRadius = "100px";  
     },
-    write: function(square) {
-        document.getElementById("radius").value = square.style.borderRadius;
-    },
-    func: function() {
-        document.getElementById("square").style.borderRadius = document.getElementById("radius").value;
-    }
+    style: "document.getElementById('square').style.borderRadius"
 })
 
 //배경색
@@ -30,14 +24,7 @@ addAttribute({
     default: function(square) {
         square.style.backgroundColor = "royalblue";
     },
-    write: function(square) {
-        document.getElementById("bgColor").value = square.style.backgroundColor;
-    },
-    func: function() {
-        var square = document.getElementById("square");
-        var bgColor = document.getElementById("bgColor").value;
-        square.style.backgroundColor = bgColor;
-    }
+    style: "document.getElementById('square').style.backgroundColor"
 })
 
 //가로
@@ -47,14 +34,7 @@ addAttribute({
     default: function(square) {
         square.style.width = "300px";
     },
-    write: function(square) {
-        document.getElementById("width").value = square.style.width;
-    },
-    func: function() {
-        var square = document.getElementById("square");
-        var width = document.getElementById("width").value;
-        square.style.width = width;
-    }
+    style: "document.getElementById('square').style.width"
 })
 
 //세로
@@ -64,12 +44,5 @@ addAttribute({
     default: function(square) {
         square.style.height = "300px";
     },
-    write: function(square) {
-        document.getElementById("height").value = square.style.height;
-    },
-    func: function() {
-        var square = document.getElementById("square");
-        var height = document.getElementById("height").value;
-        square.style.height = height;
-    }
+    style: "document.getElementById('square').style.height"
 })
