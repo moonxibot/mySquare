@@ -78,7 +78,7 @@ var attributes = []; //addAttribute로 추가된 속성들이 담김
 function openEditWin() { //도형 편집 윈도우 열기
     document.getElementById("edit").hidden = false;
     for (var i in attributes) {
-        attributes[i]["write"](document.getElementById("square"))
+        attributes[i]["style"] = document.getElementById(attributes[i]["id"]).value;
     }
 }
 
@@ -87,8 +87,8 @@ function closeEditWin() { //도형 편집 윈도우 닫기
 }
 
 function editSave() {
-    for (var i=0; i<attributes.length; i++) { //저장하며 네모에 반영하기
-        attributes[i]["func"]();
+    for (var i=0; i<attributes.length; i++) { //저장하며 네모에 반영하기 
+        document.getElementById(attributes[i]["id"]).value = eval(attributes[i]["style"])
     }
     for (var i in projectInfo) { //projectInfo에 내용 저장하기
         projectInfo[i] = document.getElementById(i).value;
@@ -120,7 +120,7 @@ function addAttribute(info) {
 
     //set default value
     info.default(document.getElementById("square"));
-    info.write(document.getElementById("square"));
+    document.getElementById(info["id"]).value = eval(info["style"]);
 
     //배열에 push
     attributes.push(info);
