@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그런건 없단다</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"> <!--나눔스퀘어-->
+
+    <link rel="shorcut icon" href="icon.png" type="image/x-icon">
+    <style>
+    * {
+        font-family: 'NanumSquare', sans-serif;
+        text-align: center;
+    }
+    body {
+        margin: 0;
+    }
+    button {
+        outline: 0;
+    }
+
+    #title {
+        background-color: black;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+
+        color: white;
+        font-size: 5rem;
+    }
+    #content {
+        font-size: 1.6rem;
+        margin: 0;
+
+        margin-top: 2vh;
+        margin-bottom: 1.5vh;
+    }
+    #goToMain {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 7px 15px;
+        
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div id="title">그런건 없단다.</div>
+    <p id="content">
+        404 에러입니다. 한 마디로 없는 페이지라는 거죠.<br>
+        이상하넹... 긁적긁적... 뭐 링크를 이상하게 쳤나...<br>
+        혹시 링크를 잘못 들어오셨다면 메인화면으로 돌아가 볼까요?
+    </p>
+    <button id="goToMain" onclick="goToMain()">메인화면으로 출발!</button>
+</body>
+<script>
+    function goToMain() {
+        window.open("https://mysquare.ml")
+    }
+</script>
+</html>
