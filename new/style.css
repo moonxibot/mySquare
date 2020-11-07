@@ -1,0 +1,83 @@
+/* 기본 설정 */
+* {
+    font-family: 'arial'; /*폰트설정*/
+}
+body {
+    margin: 0;
+}
+input, button, textarea, select {
+  outline: none;
+}
+/* ::selection {
+  background-color: #1777ff;
+} */
+
+/*배경*/
+#background {}
+
+/*메뉴바*/
+#menu {
+  /*기본 디자인*/
+  background-color: #3689ff;
+  position: absolute;
+  width: 100%;
+  padding: 12px 0px;
+  transition: 0.5s;
+}
+#menu:hover {
+  box-shadow: 0px 0px 8px gray;
+}
+#title {
+  font-size: 1.15rem;
+  background-color: #549bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin-left: 12px;
+  transition: 0.5s;
+  width: 300px;
+}
+#title:hover, #title:focus {
+  background-color: #1777ff;
+}
+
+/* 네모 */
+#square {
+    /*디자인*/
+    background-color: #0073ff;
+    border: none;
+    width: 300px;
+    height: 300px;
+    /*위치*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+
+/*도형 편집*/
+#edit {
+  /*디자인*/
+  margin: 10px;
+  padding: 10px;
+  background-color: #e8e8e8;
+  border-radius: 5px;
+  /*위치*/
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+
+  transition: 0.5s;
+}
+#edit:hover {
+  box-shadow: 0px 0px 8px #c4c4c4;
+}
+#editType {
+  font-size: 2.3rem;
+  border: none;
+  width: 200px;
+  margin-bottom: 0.6vh;
+  border-radius: 5px;
+}
