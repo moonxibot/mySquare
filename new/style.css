@@ -8,12 +8,10 @@ body {
 input, button, textarea, select {
   outline: none;
 }
-/* ::selection {
-  background-color: #1777ff;
-} */
+::selection {
+  background-color: #bad3ff;
+}
 
-/*배경*/
-#background {}
 
 /*메뉴바*/
 #menu {
@@ -62,7 +60,8 @@ input, button, textarea, select {
   /*디자인*/
   margin: 10px;
   padding: 10px;
-  background-color: #e8e8e8;
+  background-color: #f5f5f5;
+  border :1px solid #dbdbdb;
   border-radius: 5px;
   /*위치*/
   position: absolute;
@@ -78,6 +77,23 @@ input, button, textarea, select {
   font-size: 2.3rem;
   border: none;
   width: 200px;
-  margin-bottom: 0.6vh;
+  margin-bottom: 1vh;
   border-radius: 5px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  padding: 5px;
+}
+.editLabel {
+  font-size: 0.9rem;
+  margin-right: 1vh;
+}
+.editInput {
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 10000px;
+  border: 1px solid #dbdbdb;
+  transition: 0.5s;
+}
+.editInput:hover, .editInput:focus {
+  border: 1px solid #0072fc;
 }
