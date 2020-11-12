@@ -1,6 +1,11 @@
 //default variables
 let object
-const edit = document.getElementById("edit")
+let projectInfo = {
+  square: {},
+  background: {},
+  music: {}
+}
+const edit = document.getElementById("edit") //HTML 요소
 
 //add attribute
 for (let category in attr) {
@@ -10,7 +15,7 @@ for (let category in attr) {
     object.setAttribute('id', attr[category][i]["id"] + "div")
     object.setAttribute('class', category)
     object.style.marginBottom = "0.5vh"
-    edit.appendChild(object)
+    document.getElementById("category"+category[0].toUpperCase()+category.substring(1, category.length)).appendChild(object)
 
     //text
     object = document.createElement("span")
@@ -28,12 +33,22 @@ for (let category in attr) {
     object.value = attr[category][i]["defaultValue"]
     attr[category][i]["default"](document.getElementById("square")) //square default setting.
 
-    object.addEventListener("keypress", function() {
+    //이벤트 등록
+    const event = () => {
       setTimeout(() => {
         attr[category][i]["save"](document.getElementById("square"))
-      }, 10) //딜레이 주기
+        projectInfo[category][attr[category][i]["id"]] = document.getElementById(attr[category][i]["id"]).value //projectInfo에 저장하기
+      }, 10)
+    }
+    object.addEventListener("change", () => {
+      event()
     })
-
+    object.addEventListener("keydown", () => {
+      event()
+    })
     document.getElementById(attr[category][i]["id"]+"div").appendChild(object)
+
+    //projectInfo 설정
+    projectInfo[category][attr[category][i]["id"]] = document.getElementById(attr[category][i]["id"]).value
   }
 }
